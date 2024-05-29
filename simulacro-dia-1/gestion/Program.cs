@@ -1,16 +1,16 @@
 using gestion.Data;
+using gestion.Services;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 //Conexion a la base de datos
 builder.Services.AddDbContext<BaseContext>(options => options.UseMySql
 (builder.Configuration.GetConnectionString("MySqlConnection"),
 Microsoft.EntityFrameworkCore.ServerVersion.Parse("8.0.2-mysql")));
+builder.Services.AddScoped<IBookRepository, BookRepository>();
 
 builder.Services.AddControllers();
 
@@ -45,6 +45,7 @@ app.MapGet("/weatherforecast", () =>
 .WithName("GetWeatherForecast")
 .WithOpenApi();
 
+app.MapControllers();
 app.Run();
 
 record WeatherForecast(DateOnly Date, int TemperatureC, string? Summary)
