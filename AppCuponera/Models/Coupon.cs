@@ -15,7 +15,7 @@ namespace AppCuponera.Models
         public decimal? MinPurchaseAmount { get; set; }
         public decimal? MaxPurchaseAmount { get; set; }
         public string? Status { get; set; }
-        public int CreatedBy { get; set; }
+        public int UserId { get; set; }
         public User? User { get; set; }
 
         [JsonIgnore]

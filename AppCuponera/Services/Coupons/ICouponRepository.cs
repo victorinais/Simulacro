@@ -13,5 +13,8 @@ namespace AppCuponera.Services.Coupons
         void Add(Coupon coupon);
         void Update(Coupon coupon);
         void Delete(int id);
+
+        //IEnumerable<Coupon> GetListCouponsByDate(DateTime date);
+        IEnumerable<Coupon> GetListCouponsByCriteria(DateTime? date, string status, string orderBy, bool descending);
     }
 }

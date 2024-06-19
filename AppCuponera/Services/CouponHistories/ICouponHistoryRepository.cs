@@ -8,7 +8,7 @@ namespace AppCuponera.Services.CouponHistories
 {
     public interface ICouponHistoryRepository
     {
-        IEnumerable<CouponHistory> Getall();
+        IEnumerable<CouponHistory> GetAll();
         CouponHistory GetById(int id);
         void Add(CouponHistory couponHistory);
         void Update(CouponHistory couponHistory);

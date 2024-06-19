@@ -13,6 +13,5 @@ namespace AppCuponera.Services.Users
         void Add(User user);
         void Update(User user);
         void Delete(int id);
-        
     }
 }

@@ -14,6 +14,7 @@ namespace AppCuponera.Services.CouponHistories
         {
             _context = context;
         }
+        
         public void Add(CouponHistory couponHistory)
         {
             throw new NotImplementedException();
@@ -24,7 +25,7 @@ namespace AppCuponera.Services.CouponHistories
             throw new NotImplementedException();
         }
 
-        public IEnumerable<CouponHistory> Getall()
+        public IEnumerable<CouponHistory> GetAll()
         {
             throw new NotImplementedException();
         }

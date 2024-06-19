@@ -7,10 +7,10 @@ using AppCuponera.Models;
 
 namespace AppCuponera.Services.UserRoles
 {
-    public class UserRepository : IUserRoleRepository
+    public class UserRoleRepository : IUserRoleRepository
     {
         public readonly BaseContext _context;
-        public UserRepository(BaseContext context)
+        public UserRoleRepository(BaseContext context)
         {
             _context = context;
         }

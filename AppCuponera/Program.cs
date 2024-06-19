@@ -3,8 +3,10 @@ using AppCuponera.Services.CouponHistories;
 using AppCuponera.Services.Coupons;
 using AppCuponera.Services.CouponUsages;
 using AppCuponera.Services.Purchases;
+using AppCuponera.Services.Roles;
+using AppCuponera.Services.UserRoles;
+using AppCuponera.Services.Users;
 using Microsoft.EntityFrameworkCore;
-
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,6 +22,9 @@ builder.Services.AddScoped<ICouponRepository, CouponRepository>();
 builder.Services.AddScoped<ICouponHistoryRepository, CouponHistoryRepository>();
 builder.Services.AddScoped<ICouponUsageRepository, CouponUsageRepository>();
 builder.Services.AddScoped<IPurchaseRepository, PurchaseRepository>();
+builder.Services.AddScoped<IRoleRepository, RoleRepository>();
+builder.Services.AddScoped<IUserRoleRepository, UserRoleRepository>();
+builder.Services.AddScoped<IUserRepository, UserRepository>();
 
 
 var app = builder.Build();

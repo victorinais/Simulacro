@@ -14,6 +14,7 @@ namespace AppCuponera.Services.CouponUsages
         {
             _context = context;
         }
+
         public void Add(CouponUsage couponUsage)
         {
             throw new NotImplementedException();

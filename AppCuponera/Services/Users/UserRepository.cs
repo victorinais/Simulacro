@@ -14,6 +14,7 @@ namespace AppCuponera.Services.Users
         {
             _context = context;
         }
+        
         public void Add(User user)
         {
             throw new NotImplementedException();

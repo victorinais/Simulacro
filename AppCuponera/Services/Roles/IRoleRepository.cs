@@ -13,6 +13,5 @@ namespace AppCuponera.Services.Roles
         void Add(Role role);
         void Update(Role role);
         void Delete(int id);
-        
     }
 }
